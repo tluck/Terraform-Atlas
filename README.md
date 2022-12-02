@@ -1,1 +1,1 @@
-# Example to build an Atlas GCP cluster
+# Terraform provider example to build an Atlas cluster in AWS or GCP
