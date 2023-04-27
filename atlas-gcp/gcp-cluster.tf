@@ -13,7 +13,7 @@ terraform {
   required_providers {
     mongodbatlas = {
       source = "mongodb/mongodbatlas"
-      version = "0.8.2"
+      version = "1.8.2"
     }
   }
 }
@@ -40,9 +40,10 @@ resource "mongodbatlas_cluster" "cluster" {
   name                          = var.atlas_cluster_name
   num_shards                    = 1
   replication_factor            = 3
-  provider_backup_enabled       = true
+  cloud_backup                  = true
   auto_scaling_disk_gb_enabled  = true
-  mongo_db_major_version        = var.atlas_db_version
+  version_release_system        = "CONTINUOUS"
+  //mongo_db_major_version        = var.atlas_db_version
 
   //Provider Settings "block"
   provider_name                 = "GCP"
@@ -84,12 +85,12 @@ resource "mongodbatlas_database_user" "user2" {
 }
 
 #
-# Create an IP Whitelist
+# Create an IP Access List
 #
 
-resource "mongodbatlas_project_ip_whitelist" "cluster" {
+resource "mongodbatlas_project_ip_access_list" "cluster" {
 ##project_id                    = mongodbatlas_project.new_project.id
   project_id                    = var.atlas_project_id
-  ip_address                    = var.atlas_whitelistip
-  comment                       = "Whitelist Entry for Terraform Demo"
+  ip_address                    = var.atlas_access_listip
+  comment                       = "Access List Entry for Terraform Demo"
 }

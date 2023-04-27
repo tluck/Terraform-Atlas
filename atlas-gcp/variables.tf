@@ -3,18 +3,20 @@
 #
 
 variable "atlas_org_api_public_key" {
-   default  = "XXXXXXXG"
+  default  = "xxxxyyyy"
 }
+
 variable "atlas_org_api_private_key" {
-   default = "xx9a5xxb-e0fe-4bd9-9752-xxxxxxxxxx"
+  default = "3bf51f06-c92a-4301-92f6-XXXXYYYYZZZZ"
+
 }
 variable "atlas_org_id" {
-  default = "xxx5c939079358e2b051xxxxx"
+  default = "5c5c939079358e2b051bc839"
 }
 
 # to use an existing project
 variable "atlas_project_id" {
-  default = "xxxx66a6ff7a25d637xxxxxx"
+  default = "5bc52019ff7a25deXXXXYYYY"
 }
 
 # to create a new project
@@ -31,35 +33,35 @@ variable "atlas_region" {
 }
 
 variable "atlas_db_version" {
-  default = "4.0"
+  default = "6.0"
 }
 
 variable "atlas_size" {
-  default = "M20"
+  default = "M10"
 }
 
 variable "atlas_disk" {
-  default = 40
+  default = 20
 }
 
 variable "atlas_database_username" {
-  default = "dbAdmin"
+  default = "dbAdminTF"
 }
 
 variable "atlas_database_user_password" {
-  default = "mongodb1"
+  default = "Mongodb1"
 }
 
 variable "atlas_database_username2" {
-  default = "main_user"
+  default = "appUserTF"
 }
 
 variable "atlas_database_user_password2" {
-  default = "main_user"
+  default = "Mongodb1"
 }
 
-variable "atlas_whitelistip" {
-  default = "99.199.99.199"
+variable "atlas_access_listip" {
+  default = "67.188.49.195"
 }
 
 

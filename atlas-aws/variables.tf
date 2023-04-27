@@ -33,7 +33,7 @@ variable "atlas_region" {
 }
 
 variable "atlas_db_version" {
-  default = "5.0"
+  default = "6.0"
 }
 
 variable "atlas_size" {
@@ -60,7 +60,7 @@ variable "atlas_database_user_password2" {
   default = "Mongodb1"
 }
 
-variable "atlas_whitelistip" {
+variable "atlas_access_listip" {
   default = "50.213.10.27"
 }
 
